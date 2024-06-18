@@ -63,7 +63,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'workflow_dispatch'
     steps:
-      - name: Download iw7-mod.exe
+      - name: Download IW7-Mod
         uses: actions/download-artifact@v3
         with:
           name: Release
@@ -78,3 +78,5 @@ jobs:
           prerelease: false
           files: |
             artifacts/iw7-mod.exe
+            artifacts/tlsdll.dll
+            artifacts/runner.exe
